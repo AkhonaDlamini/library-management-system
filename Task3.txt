@@ -1,0 +1,34 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+#Read dataset:
+dataframe = pd.read_csv("C:/Users/27789/Downloads/motor_insure.csv/motor_data11-14lats.csv")
+
+#Inspect its column by displaying the first 10 records:
+print(dataframe.head(10))
+
+#Display records for make and usage for sets_num that are more than 40:
+#Create igama ekthiwa u seats ozo store ama values ka seats_num a greater than 40:
+seats = dataframe['SEATS_NUM']>40
+
+#then si create  i list enalama values siyi store ku filtered_df
+filtered_df = dataframe[seats]
+
+#Print ama values aku column Usage no Make:
+#inside leyo list sibheka i make ne usage e correspond nale value ekade iku seats_num:
+print(filtered_df[['MAKE','USAGE']])
+
+
+#Plot a basic graph showing effective_yr on y axes and carrying capacity on x_axes:
+
+#Create i list yama co-ordinates for x-axes:
+x_axes = [6,6,6,6,7]
+
+#Create i list yama co-ordinate for y-axes:
+y_axes = [8,8,8,8,8]
+
+
+plt.plot(x_axes,y_axes)
+plt.ylabel("effective_yr")
+plt.xlabel("carrying capacity")
+plt.show()
