@@ -1,0 +1,17 @@
+#Task 1 C: Rewrite the entire task 1B without using functions
+
+books = []
+book_id = input("Enter book id:")
+title = input("Enter the title of the book:")
+author = input("Enter the author of the book:")
+status = input("Enter book status:")
+
+books.append({'Book Id':book_id,'Book Title':title,'Author':author,'Status':status})
+print(books)
+
+members = []
+member_id = int(input("Enter member id:"))
+name = input("Enter your name:")
+
+members.append({'Member Id':member_id,'Name':name})
+print(members)
