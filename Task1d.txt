@@ -1,0 +1,19 @@
+#Task 1 D: Rewrite the entire Task 1 C using Data frames instead of lists.
+
+import pandas as pd
+
+book_id = input("Enter book id:")
+title = input("Enter the title of the book:")
+author = input("Enter the author of the book:")
+status = input("Enter book status:")
+
+books = {"Book Id":[book_id],"Title":[title],"Author":[author],"Status":[status]}
+data = pd.DataFrame(books)
+print(data)
+
+member_id = int(input("Enter member id:"))
+name = input("Enter your name:")
+
+members ={"Member Id":[member_id],"Name":[name]}
+dt = pd.DataFrame(members)
+print(dt)
